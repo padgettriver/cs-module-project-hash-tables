@@ -1,6 +1,23 @@
 def word_count(s):
     # Your code here
+    origString = s.lower()
+    removedChars = '":;,.-+=/\|][}{()*^&'
+    newString = origString
+    for character in removedChars:
+        newString = newString.replace(character, "")
+    splitString = newString.split()
 
+    wordCount = {}
+
+    for x in splitString:
+        if not wordCount.get(x):
+            wordCount[x] = 1
+        else:
+            wordCount[x] = wordCount[x] + 1
+
+
+
+    return wordCount
 
 
 if __name__ == "__main__":

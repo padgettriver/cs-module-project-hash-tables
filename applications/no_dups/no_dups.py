@@ -1,5 +1,19 @@
 def no_dups(s):
-    # Your code here
+    newString = s.split()
+    myDict = {}
+
+    for x in newString:
+        myDict[x] = 1
+
+    preAnswer = list(myDict.keys())
+    answer = ""
+
+    for x in preAnswer:
+        answer += str(x) + " "
+
+    answer = answer[:-1]
+
+    return answer
 
 
 
